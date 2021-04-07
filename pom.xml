@@ -5,6 +5,23 @@
     <groupId>cn.wft</groupId>
     <artifactId>new-dev</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <modules>
+        <module>new-dev-common</module>
+        <module>new-dev-model</module>
+        <module>new-dev-service</module>
+        <module>new-dev-test</module>
+        <module>new-dev-user</module>
+    </modules>
+    <repositories>
+        <repository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
     <name>new-dev</name>
     <description>Demo project for Spring Boot</description>
 
@@ -13,7 +30,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.2.5.RELEASE</version>
-        <relativePath />
+        <relativePath/>
     </parent>
 
     <properties>
