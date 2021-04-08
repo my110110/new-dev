@@ -10,6 +10,7 @@
         <module>news-dev-model</module>
         <module>news-dev-service-api</module>
         <module>news-dev-service-user</module>
+        <module>mybatis-generator-database</module>
     </modules>
 
     <repositories>
