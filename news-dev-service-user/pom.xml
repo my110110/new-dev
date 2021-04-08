@@ -9,7 +9,14 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>new-dev-test</artifactId>
+    <artifactId>news-dev-service-user</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>cn.wft</groupId>
+            <artifactId>news-dev-service-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
 
+    </dependencies>
 
 </project>

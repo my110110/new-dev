@@ -6,12 +6,12 @@
     <artifactId>new-dev</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <modules>
-        <module>new-dev-common</module>
-        <module>new-dev-model</module>
-        <module>new-dev-service</module>
-        <module>new-dev-test</module>
-        <module>new-dev-user</module>
+        <module>news-dev-common</module>
+        <module>news-dev-model</module>
+        <module>news-dev-service-api</module>
+        <module>news-dev-service-user</module>
     </modules>
+
     <repositories>
         <repository>
             <id>spring-milestones</id>

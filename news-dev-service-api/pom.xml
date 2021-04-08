@@ -9,9 +9,13 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>new-dev-user</artifactId>
-
+    <artifactId>news-dev-service-api</artifactId>
     <dependencies>
+        <dependency>
+            <groupId>cn.wft</groupId>
+            <artifactId>news-dev-model</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
@@ -24,7 +28,9 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
         </dependency>
+
     </dependencies>
+
 
 
 </project>
