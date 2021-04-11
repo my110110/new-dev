@@ -15,6 +15,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
 import java.util.ArrayList;
@@ -25,6 +26,7 @@ import java.util.Map;
  * @author zyh
  */
 @Slf4j
+@RestController
 public class UserController  extends BaseController implements UserControllerApi {
 
 
@@ -54,7 +56,6 @@ public class UserController  extends BaseController implements UserControllerApi
 
     @Override
     public GraceJSONResult getAccountInfo(String userId) {
-        System.out.println(1);
         // 0. 判断参数不能为空
         if (StringUtils.isBlank(userId)) {
             return GraceJSONResult.errorCustom(ResponseStatusEnum.UN_LOGIN);
@@ -62,7 +63,6 @@ public class UserController  extends BaseController implements UserControllerApi
 
         // 1. 根据userId查询用户的信息
         AppUser user = getUser(userId);
-        System.out.println(user);
 
         // 2. 返回用户信息
         UserAccountInfoVO accountInfoVO = new UserAccountInfoVO();
@@ -123,7 +123,6 @@ public class UserController  extends BaseController implements UserControllerApi
             user = JsonUtils.jsonToPojo(userJson, AppUser.class);
         } else {
             user = userService.getUser(userId);
-            System.out.println(user);
             // 由于用户信息不怎么会变动，对于一些千万级别的网站来说，这类信息不会直接去查询数据库
             // 那么完全可以依靠redis，直接把查询后的数据存入到redis中
             redis.set(REDIS_USER_INFO + ":" + userId, JsonUtils.objectToJson(user));
