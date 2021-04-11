@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 import javax.servlet.http.HttpServletRequest;
 
 /**
+ * @author zyh
  * 用户获得用户ip的工具类
  */
 @Component

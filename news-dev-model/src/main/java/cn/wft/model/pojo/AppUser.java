@@ -7,8 +7,8 @@ import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Table(name = "app_user")
 @Data
+@Table(name = "app_user")
 public class AppUser {
     @Id
     private String id;

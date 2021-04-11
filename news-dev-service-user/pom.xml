@@ -16,6 +16,11 @@
             <artifactId>news-dev-service-api</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>cn.wft</groupId>
+            <artifactId>news-dev-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
 
     </dependencies>
 

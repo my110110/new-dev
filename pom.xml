@@ -13,16 +13,7 @@
         <module>mybatis-generator-database</module>
     </modules>
 
-    <repositories>
-        <repository>
-            <id>spring-milestones</id>
-            <name>Spring Milestones</name>
-            <url>https://repo.spring.io/milestone</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
+
     <name>new-dev</name>
     <description>Demo project for Spring Boot</description>
 
@@ -168,6 +159,8 @@
             </dependency>
 
             <!-- 文件上传fdfs工具 -->
+
+
             <dependency>
                 <groupId>com.github.tobato</groupId>
                 <artifactId>fastdfs-client</artifactId>

@@ -55,6 +55,7 @@ public class BaseController {
 
     @Value("${website.domain-name}")
     public String DOMAIN_NAME;
+
     public static final Integer COOKIE_MONTH = 30 * 24 * 60 * 60;
     public static final Integer COOKIE_DELETE = 0;
 
