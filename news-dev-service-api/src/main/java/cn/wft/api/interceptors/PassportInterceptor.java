@@ -11,6 +11,9 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/**
+ * @author zyh
+ */
 public class PassportInterceptor implements HandlerInterceptor {
 
     @Autowired
@@ -36,7 +39,6 @@ public class PassportInterceptor implements HandlerInterceptor {
 
         if (keyIsExist) {
               GraceException.display(ResponseStatusEnum.SMS_NEED_WAIT_ERROR);
-//            System.out.println("短信发送频率太大！");
             return false;
         }
 

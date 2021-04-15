@@ -11,6 +11,7 @@
         <module>news-dev-service-api</module>
         <module>news-dev-service-user</module>
         <module>mybatis-generator-database</module>
+        <module>news-dev-files</module>
     </modules>
 
 

@@ -1,6 +1,7 @@
 package cn.wft.common.enums;
 
 /**
+ * @author zyh
  * @Desc: 文章自动审核结果 枚举
  */
 public enum ArticleReviewLevel {
