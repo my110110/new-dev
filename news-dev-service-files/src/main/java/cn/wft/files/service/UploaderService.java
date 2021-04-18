@@ -1,10 +1,12 @@
 package cn.wft.files.service;
 
+import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 /**
  * @author zyh
  */
+@Service
 public interface UploaderService {
 
     /**

@@ -10,10 +10,10 @@ import org.springframework.context.annotation.ComponentScan;
  */
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
 @ComponentScan(basePackages = {"cn.wft", "cn.wft.common.idworker"})
-public class Application {
+public class FilesApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(FilesApplication.class, args);
     }
 
 }

@@ -5,7 +5,6 @@
 #
 ############################################################
 server:
-    port: 8004
   tomcat:
     uri-encoding: UTF-8
     max-swallow-size: -1  # tomcat默认大小2M，超过2M的文件不会被捕获，需要调整此处大小为100MB或者-1即可
@@ -38,6 +37,10 @@ spring:
 #
 ############################################################
 fdfs:
-  connect-timeout: 30
-  so-timeout: 30
-  tracker-list: 127.0.0.1:22122
+  pool:
+    max-total: 200   # 连接池最大数量
+    max-total-per-key: 50  # 单个tracker最大连接数
+    max-wait-millis: 5000 # 连
+  connect-timeout: 1300
+  so-timeout: 1300
+  tracker-list[0]: 94.191.61.42:22122

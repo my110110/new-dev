@@ -24,22 +24,25 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.SimpleTimeZone;
 
+/**
+ * @author zyh
+ */
 @Component
 public class FaceVerifyUtils {
 
-    final static Logger logger = LoggerFactory.getLogger(FaceVerifyUtils.class);
+    final  Logger logger = LoggerFactory.getLogger(FaceVerifyUtils.class);
 
     @Autowired
     private AliyunResource aliyunResource;
 
-    private static final String gateway = "https://dtplus-cn-shanghai.data.aliyuncs.com/face/verify";
+    private  final String gateway = "https://dtplus-cn-shanghai.data.aliyuncs.com/face/verify";
 
     /**
      *
      * @param s
      * @return
      */
-    public static String MD5Base64(String s) {
+    public String MD5Base64(String s) {
         if (s == null) {
             return null;
         }
@@ -60,7 +63,7 @@ public class FaceVerifyUtils {
     /*
      * 计算 HMAC-SHA1
      */
-    public static String HMACSha1(String data, String key) {
+    public String HMACSha1(String data, String key) {
         String result;
         try {
             SecretKeySpec signingKey = new SecretKeySpec(key.getBytes(), "HmacSHA1");
@@ -77,7 +80,7 @@ public class FaceVerifyUtils {
     /*
      * 等同于javaScript中的 new Date().toUTCString();
      */
-    public static String toGMTString(Date date) {
+    public String toGMTString(Date date) {
         SimpleDateFormat df = new SimpleDateFormat("E, dd MMM yyyy HH:mm:ss z", Locale.UK);
         df.setTimeZone(new SimpleTimeZone(0, "GMT"));
         return df.format(date);

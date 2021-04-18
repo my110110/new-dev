@@ -30,9 +30,9 @@ public class AliImageReviewUtils {
 
     public boolean reviewImage(String imgUrl) throws Exception {
         IClientProfile profile = DefaultProfile
-                .getProfile("cn-shanghai", "", "");
+                .getProfile("cn-hangzhou", "LTAI5tPDqXMzjxtvQAiPU3JW", "qrUCbTDkbHInjoxkEhrdtO7PeVawZT");
         DefaultProfile
-                .addEndpoint("cn-shanghai", "cn-shanghai", "Green", "green.cn-shanghai.aliyuncs.com");
+                .addEndpoint("oss-cn-hangzhou.aliyuncs.com", "cn-hangzhou", "Green", "green.cn-hangzhou.aliyuncs.com");
         IAcsClient client = new DefaultAcsClient(profile);
 
         ImageSyncScanRequest imageSyncScanRequest = new ImageSyncScanRequest();

@@ -1,20 +1,22 @@
-package cn.wft.user;
+package cn.wft.admin;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 import tk.mybatis.spring.annotation.MapperScan;
 
-import java.util.TimeZone;
-
-@SpringBootApplication
-@MapperScan(basePackages = "cn.wft.user.mapper")
+/**
+ * @author zyh
+ */
+@SpringBootApplication(exclude = MongoAutoConfiguration.class)
+@MapperScan(basePackages = "cn.wft.admin.mapper")
 @ComponentScan(basePackages = {"cn.wft", "cn.wft.common.idworker"})
-public class ServiceUserApplication {
-
+public class AdminApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ServiceUserApplication.class,args);
-
+        SpringApplication.run(AdminApplication.class, args);
     }
+
 }
+
