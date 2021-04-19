@@ -55,6 +55,6 @@ pagehelper:
   helperDialect: mysql
   supportMethodsArguments: true
 website:
-    domain-name: wft.cn
+    domain-name: 127.0.0.1
 
 

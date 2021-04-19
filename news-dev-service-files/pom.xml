@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>news-dev-files</artifactId>
+    <artifactId>news-dev-service-files</artifactId>
 
     <dependencies>
         <dependency>

@@ -35,11 +35,11 @@ public class Swagger2 {
         return new ApiInfoBuilder()
                 .title("wft论坛·论坛接口api")                       // 文档页标题
                 .contact(new Contact("wft",
-                        "https://www.wft.cn",
+                        "https://www.127.0.0.1",
                         "abc@wft.com"))                   // 联系人信息
                 .description("专为wft·论坛平台提供的api文档")      // 详细信息
                 .version("1.0.1")                               // 文档版本号
-                .termsOfServiceUrl("https://www.wft.cn")     // 网站地址
+                .termsOfServiceUrl("https://www.127.0.0.1")     // 网站地址
                 .build();
     }
 }

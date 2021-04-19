@@ -10,6 +10,9 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/**
+ * @author zyh
+ */
 public class ArticleReadInterceptor extends BaseInterceptor implements HandlerInterceptor {
 
     @Autowired

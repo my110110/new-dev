@@ -1,10 +1,9 @@
 package cn.wft.api.config;
 
-import cn.wft.api.interceptors.PassportInterceptor;
-import cn.wft.api.interceptors.UserActiveInterceptor;
-import cn.wft.api.interceptors.UserTokenInterceptor;
+import cn.wft.api.interceptors.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
@@ -20,21 +19,21 @@ public class InterceptorConfig implements WebMvcConfigurer {
     public UserTokenInterceptor userTokenInterceptor() {
         return new UserTokenInterceptor();
     }
-//
-//    @Bean
-//    public ArticleReadInterceptor articleReadInterceptor() {
-//        return new ArticleReadInterceptor();
-//    }
+
+    @Bean
+    public ArticleReadInterceptor articleReadInterceptor() {
+        return new ArticleReadInterceptor();
+    }
 //
     @Bean
     public UserActiveInterceptor userActiveInterceptor() {
         return new UserActiveInterceptor();
     }
-//
-//    @Bean
-//    public AdminTokenInterceptor adminTokenInterceptor() {
-//        return new AdminTokenInterceptor();
-//    }
+
+    @Bean
+    public AdminTokenInterceptor adminTokenInterceptor() {
+        return new AdminTokenInterceptor();
+    }
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
@@ -54,21 +53,22 @@ public class InterceptorConfig implements WebMvcConfigurer {
                 .addPathPatterns("/fs/uploadSomeFiles")
                 .addPathPatterns("/fans/follow")
                 .addPathPatterns("/fans/unfollow");
-//
-//        registry.addInterceptor(adminTokenInterceptor())
-//                .addPathPatterns("/adminMng/adminIsExist")
-//                .addPathPatterns("/adminMng/addNewAdmin")
-//                .addPathPatterns("/adminMng/getAdminList")
-//                .addPathPatterns("/fs/uploadToGridFS")
-//                .addPathPatterns("/fs/readInGridFS")
-//                .addPathPatterns("/friendLinkMng/saveOrUpdateFriendLink")
-//                .addPathPatterns("/friendLinkMng/getFriendLinkList")
-//                .addPathPatterns("/friendLinkMng/delete")
-//                .addPathPatterns("/categoryMng/saveOrUpdateCategory")
-//                .addPathPatterns("/categoryMng/getCatList");
-//
-//        registry.addInterceptor(articleReadInterceptor())
-//                .addPathPatterns("/portal/article/readArticle");
+
+        registry.addInterceptor(adminTokenInterceptor())
+                .addPathPatterns("/adminMng/adminIsExist")
+                .addPathPatterns("/adminMng/addNewAdmin")
+                .addPathPatterns("/adminMng/getAdminList")
+                .addPathPatterns("/fs/uploadToGridFS")
+                .addPathPatterns("/fs/readInGridFS")
+                .addPathPatterns("/friendLinkMng/saveOrUpdateFriendLink")
+                .addPathPatterns("/friendLinkMng/getFriendLinkList")
+                .addPathPatterns("/friendLinkMng/delete")
+                .addPathPatterns("/categoryMng/saveOrUpdateCategory")
+                .addPathPatterns("/categoryMng/getCatList");
+
+        registry.addInterceptor(articleReadInterceptor())
+                .addPathPatterns("/portal/article/readArticle");
 
     }
+
 }
