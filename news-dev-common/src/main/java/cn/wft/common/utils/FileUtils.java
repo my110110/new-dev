@@ -1,11 +1,11 @@
 package cn.wft.common.utils;
 
-import sun.misc.BASE64Encoder;
 
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 import java.net.URLDecoder;
+import java.util.Base64;
 
 public class FileUtils {
 
@@ -85,8 +85,8 @@ public class FileUtils {
         }
 
         // 对字节数组Base64编码并且返回
-        BASE64Encoder encoder = new BASE64Encoder();
-        return encoder.encode(fileData);
+        return Base64.getEncoder().encodeToString(fileData);
+
     }
 
 }
