@@ -4,6 +4,7 @@ import cn.wft.common.exception.GraceException;
 import cn.wft.common.grace.result.ResponseStatusEnum;
 import cn.wft.common.utils.IPUtil;
 import cn.wft.common.utils.RedisOperator;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
@@ -14,6 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * @author zyh
  */
+@Slf4j
 public class PassportInterceptor implements HandlerInterceptor {
 
     @Autowired
@@ -31,6 +33,8 @@ public class PassportInterceptor implements HandlerInterceptor {
      */
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+
+        log.info("1");
 
         // 获得用户ip
         String userIp = IPUtil.getRequestIp(request);

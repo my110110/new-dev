@@ -1,8 +1,8 @@
 package cn.wft.api.interceptors;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * @author zyh
  */
+@Slf4j
 public class UserTokenInterceptor extends BaseInterceptor implements HandlerInterceptor {
 
     /**
@@ -23,6 +24,8 @@ public class UserTokenInterceptor extends BaseInterceptor implements HandlerInte
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 
+
+        log.info("123");
         String userId = request.getHeader("headerUserId");
         String userToken = request.getHeader("headerUserToken");
 
