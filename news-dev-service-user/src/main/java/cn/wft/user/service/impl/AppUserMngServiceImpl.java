@@ -25,8 +25,8 @@ public class AppUserMngServiceImpl extends BaseService implements AppUserMngServ
     @Override
     public PagedGridResult queryAllUserList(String nickname,
                                             Integer status,
-                                            Date startDate,
-                                            Date endDate,
+                                            String startDate,
+                                            String endDate,
                                             Integer page,
                                             Integer pageSize) {
 

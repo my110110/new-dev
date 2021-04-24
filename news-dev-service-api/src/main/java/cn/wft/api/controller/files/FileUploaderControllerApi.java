@@ -21,7 +21,7 @@ public interface FileUploaderControllerApi {
      * @throws Exception
      */
     @PostMapping("/uploadFace")
-    public GraceJSONResult uploadFace(@RequestParam String userId,
+    GraceJSONResult uploadFace(@RequestParam String userId,
                                       MultipartFile file) throws Exception;
 
     /**
@@ -32,7 +32,7 @@ public interface FileUploaderControllerApi {
      * @throws Exception
      */
     @PostMapping("/uploadSomeFiles")
-    public GraceJSONResult uploadSomeFiles(@RequestParam String userId,
+    GraceJSONResult uploadSomeFiles(@RequestParam String userId,
                                       MultipartFile[] files) throws Exception;
 
 
@@ -43,7 +43,7 @@ public interface FileUploaderControllerApi {
      * @throws Exception
      */
     @PostMapping("/uploadToGridFS")
-    public GraceJSONResult uploadToGridFS(@RequestBody NewAdminBO newAdminBO)
+    GraceJSONResult uploadToGridFS(@RequestBody NewAdminBO newAdminBO)
             throws Exception;
 
     /**
@@ -53,7 +53,7 @@ public interface FileUploaderControllerApi {
      * @throws Exception
      */
     @GetMapping("/readInGridFS")
-    public void readInGridFS(String faceId,
+    void readInGridFS(String faceId,
                                         HttpServletRequest request,
                                         HttpServletResponse response)
             throws Exception;
@@ -68,7 +68,7 @@ public interface FileUploaderControllerApi {
      * @throws Exception
      */
     @GetMapping("/readFace64InGridFS")
-    public GraceJSONResult readFace64InGridFS(String faceId,
+    GraceJSONResult readFace64InGridFS(String faceId,
                              HttpServletRequest request,
                              HttpServletResponse response)
             throws Exception;

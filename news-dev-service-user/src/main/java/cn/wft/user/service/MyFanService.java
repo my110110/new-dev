@@ -3,9 +3,12 @@ package cn.wft.user.service;
 import cn.wft.common.enums.Sex;
 import cn.wft.common.utils.PagedGridResult;
 import cn.wft.model.pojo.vo.RegionRatioVO;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+
+@Component
 public interface MyFanService {
 
     /**

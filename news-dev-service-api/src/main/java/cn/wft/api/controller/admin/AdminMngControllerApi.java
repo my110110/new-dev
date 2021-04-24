@@ -18,25 +18,25 @@ import javax.servlet.http.HttpServletResponse;
 @RequestMapping("adminMng")
 public interface AdminMngControllerApi {
 
-    @ApiOperation(value = "hello方法的接口", notes = "hello方法的接口", httpMethod = "POST")
+    @ApiOperation(value = "登录接口", notes = "登录接口", httpMethod = "POST")
     @PostMapping("/adminLogin")
-    public GraceJSONResult adminLogin(@RequestBody AdminLoginBO adminLoginBO,
+    GraceJSONResult adminLogin(@RequestBody AdminLoginBO adminLoginBO,
                                       HttpServletRequest request,
                                       HttpServletResponse response);
 
     @ApiOperation(value = "查询admin用户名是否存在", notes = "查询admin用户名是否存在", httpMethod = "POST")
     @PostMapping("/adminIsExist")
-    public GraceJSONResult adminIsExist(@RequestParam String username);
+    GraceJSONResult adminIsExist(@RequestParam String username);
 
     @ApiOperation(value = "创建admin", notes = "创建admin", httpMethod = "POST")
     @PostMapping("/addNewAdmin")
-    public GraceJSONResult addNewAdmin(@RequestBody NewAdminBO newAdminBO,
+    GraceJSONResult addNewAdmin(@RequestBody NewAdminBO newAdminBO,
                                        HttpServletRequest request,
                                        HttpServletResponse response);
 
     @ApiOperation(value = "查询admin列表", notes = "查询admin列表", httpMethod = "POST")
     @PostMapping("/getAdminList")
-    public GraceJSONResult getAdminList(
+    GraceJSONResult getAdminList(
             @ApiParam(name = "page", value = "查询下一页的第几页", required = false)
             @RequestParam Integer page,
             @ApiParam(name = "pageSize", value = "分页查询每一页显示的条数", required = false)
@@ -44,13 +44,13 @@ public interface AdminMngControllerApi {
 
     @ApiOperation(value = "admin退出登录", notes = "admin退出登录", httpMethod = "POST")
     @PostMapping("/adminLogout")
-    public GraceJSONResult adminLogout(@RequestParam String adminId,
+    GraceJSONResult adminLogout(@RequestParam String adminId,
                                        HttpServletRequest request,
                                        HttpServletResponse response);
 
     @ApiOperation(value = "admin管理员的人脸登录", notes = "admin管理员的人脸登录", httpMethod = "POST")
     @PostMapping("/adminFaceLogin")
-    public GraceJSONResult adminFaceLogin(@RequestBody AdminLoginBO adminLoginBO,
+    GraceJSONResult adminFaceLogin(@RequestBody AdminLoginBO adminLoginBO,
                                        HttpServletRequest request,
                                        HttpServletResponse response);
 }

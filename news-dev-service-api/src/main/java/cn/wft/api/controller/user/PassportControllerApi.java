@@ -30,7 +30,7 @@ public interface PassportControllerApi {
 
     @ApiOperation(value = "用户退出登录", notes = "用户退出登录", httpMethod = "POST")
     @PostMapping("/logout")
-    public GraceJSONResult logout(@RequestParam String userId,
+    GraceJSONResult logout(@RequestParam String userId,
                                   HttpServletRequest request,
                                   HttpServletResponse response);
 }

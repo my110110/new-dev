@@ -34,8 +34,6 @@ public class PassportInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 
-        log.info("1");
-
         // 获得用户ip
         String userIp = IPUtil.getRequestIp(request);
 

@@ -15,20 +15,20 @@ public interface FriendLinkControllerApi {
 
     @ApiOperation(value = "新增或者修改友情链接", notes = "新增或者修改友情链接", httpMethod = "POST")
     @PostMapping("/saveOrUpdateFriendLink")
-    public GraceJSONResult saveOrUpdateFriendLink(
+    GraceJSONResult saveOrUpdateFriendLink(
                     @RequestBody @Valid SaveFriendLinkBO saveFriendLinkBO,
                                       BindingResult result);
 
     @ApiOperation(value = "查询友情链接列表", notes = "查询友情链接列表", httpMethod = "POST")
     @PostMapping("/getFriendLinkList")
-    public GraceJSONResult getFriendLinkList();
+    GraceJSONResult getFriendLinkList();
 
     @ApiOperation(value = "删除友情链接", notes = "删除友情链接", httpMethod = "POST")
     @PostMapping("/delete")
-    public GraceJSONResult delete(@RequestParam String linkId);
+    GraceJSONResult delete(@RequestParam String linkId);
 
 
     @ApiOperation(value = "门户端查询友情链接列表", notes = "门户端查询友情链接列表", httpMethod = "GET")
     @GetMapping("portal/list")
-    public GraceJSONResult queryPortalAllFriendLinkList();
+    GraceJSONResult queryPortalAllFriendLinkList();
 }
