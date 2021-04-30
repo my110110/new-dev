@@ -188,7 +188,7 @@ public class AdminMngController extends BaseController implements AdminMngContro
 
         // 2. 请求文件服务，获得人脸数据的base64数据
         String fileServerUrlExecute
-                = "http://files.imoocnews.com:8004/fs/readFace64InGridFS?faceId=" + adminFaceId;
+                = "http://127.0.0.1:10014/fs/readFace64InGridFS?faceId=" + adminFaceId;
         ResponseEntity<GraceJSONResult> responseEntity
                 = restTemplate.getForEntity(fileServerUrlExecute, GraceJSONResult.class);
         GraceJSONResult bodyResult = responseEntity.getBody();

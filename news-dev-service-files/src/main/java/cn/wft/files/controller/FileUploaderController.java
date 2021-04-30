@@ -22,7 +22,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 import sun.misc.BASE64Decoder;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.ByteArrayInputStream;
@@ -228,12 +227,12 @@ public class FileUploaderController implements FileUploaderControllerApi {
         System.out.println(fileName);
 
         // 获取文件流，保存文件到本地或者服务器的临时目录
-        File fileTemp = new File("/workspace/temp_face");
+        File fileTemp = new File("/var/www/maven/new-dev/temp_face/");
         if (!fileTemp.exists()) {
             fileTemp.mkdirs();
         }
 
-        File myFile = new File("/workspace/temp_face/" + fileName);
+        File myFile = new File("/var/www/maven/new-dev/temp_face" + fileName);
 
         // 创建文件输出流
         OutputStream os = new FileOutputStream(myFile);
